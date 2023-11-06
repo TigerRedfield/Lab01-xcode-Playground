@@ -176,4 +176,79 @@ for i in 0..<ar.count {
 
 print("SortBubble: \(ar)");
 
+func Circle(Px:Double, Py:Double, Ox:Double, Oy:Double, R:Double){
+    let C:Double = sqrt(pow(Ox-Px, 2)+pow(Oy-Py, 2))
+    print("Coordinate: \(C)");
+    if(C <= R){
+        print("Point in Circle - True")
+    }
+    else
+    {
+        print("Point in Circle - Miss")
+    }
+    return;
+}
 
+Circle(Px: 5, Py: 5, Ox: 10, Oy: 10, R: 20)
+
+func MassiveRandom(){
+    var M:[Int] = []
+    for n in 1...5{
+        M.append(Int.random(in: -10...10))
+    }
+    print(M);
+    return;
+}
+
+MassiveRandom()
+MassiveRandom()
+
+class Circle2
+{
+    private var x:Float
+    private var y:Float
+    private var r:Float
+    init (a:Float, b:Float, R:Float)
+    {
+        x = a;
+        y = b;
+        r = R;
+    }
+    
+    func setPosition(X:Float, Y:Float){
+        x = X;
+        y = Y;
+        print("Postion: X = \(X), Y = \(Y)")
+    }
+    
+    func setRadius(R:Float){
+        r = R;
+    }
+    
+    func getRadius(){
+        if(r>=0)
+        {
+            print("R: \(r)");
+        }
+        else
+        {
+            print("Radius Empty");
+        }
+    }
+    func LengthCircle(R:Float){
+        print("L: \(2*3.14*R)");
+    }
+    
+    func S(R:Float){
+        print("S: \(3.14 * pow(R, 2))")
+    }
+    
+}
+
+var C:Circle2 = Circle2(a: 10.0, b: 5.0, R: 20.0);
+C.getRadius()
+C.setPosition(X: 5.0, Y: 10.0)
+C.setRadius(R: -1.0);
+C.getRadius();
+C.LengthCircle(R: 20.0)
+C.S(R: 20.0);
